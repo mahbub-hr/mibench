@@ -1,0 +1,19 @@
+# 1. Ignore everything by default
+*
+
+# 2. Re-allow directories so git can actually look inside them
+!*/
+
+# 3. Explicitly allow source and build files
+!Makefile
+!*.c
+!*.h
+!*.cpp
+!*.txt
+!*.sh
+!src/
+
+# 4. Specifically ignore the outputs your script creates
+# (Even if they matched the rules above)
+*.bc
+*_opt.bc
