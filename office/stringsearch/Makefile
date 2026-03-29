@@ -1,7 +1,7 @@
 FILE1 = bmhasrch.c  bmhisrch.c  bmhsrch.c  pbmsrch_small.c 
 FILE2 = bmhasrch.c  bmhisrch.c  bmhsrch.c  pbmsrch_large.c 
 CC = gcc
-CFLAGS = -static -O3
+CFLAGS = -static -O3 -Wno-error=implicit-int -Wno-error=implicit-function-declaration
 LIBS = -lm
 
 all: search_small search_large

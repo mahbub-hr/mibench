@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -static -O3
+CFLAGS = -static -O3 -Wno-error=implicit-int -Wno-error=implicit-function-declaration
 LIBS = -lm
 
 susan: susan.c Makefile
