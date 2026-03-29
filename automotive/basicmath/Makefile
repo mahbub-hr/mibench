@@ -12,4 +12,4 @@ basicmath_large: ${FILE2} Makefile
 	$(CC) $(CFLAGS) ${FILE2} -o basicmath_large -lm
 
 clean:
-	rm -rf basicmath_small basicmath_large output*
+	rm -rf basicmath_small basicmath_large output* *.o *.bc .*.o .*.bc

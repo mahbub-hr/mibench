@@ -6,4 +6,4 @@ crc: crc_32.c Makefile
 	$(CC) $(CFLAGS) crc_32.c -O3 -o crc 
 
 clean:
-	rm -rf crc output*
+	rm -rf crc output* *.o *.bc .*.o .*.bc

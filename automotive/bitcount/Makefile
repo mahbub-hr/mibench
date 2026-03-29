@@ -7,4 +7,4 @@ bitcnts: ${FILE} Makefile
 	$(CC) $(CFLAGS) ${FILE} -o bitcnts
 
 clean:
-	rm -rf bitcnts output*
+	rm -rf bitcnts output* *.o *.bc .*.o .*.bc

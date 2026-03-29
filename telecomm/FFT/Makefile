@@ -13,4 +13,4 @@ main.o: main.c
 	$(CC) ${CFLAGS} -c main.c
 
 clean:
-	rm -rf *.o fft output*
+	rm -rf *.o fft output* *.o *.bc .*.o .*.bc

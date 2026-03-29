@@ -11,4 +11,4 @@ dijkstra_small: dijkstra_small.c Makefile
 	$(CC) $(CFLAGS) dijkstra_small.c -o dijkstra_small 
 
 clean:
-	rm -rf dijkstra_large dijkstra_small output*
+	rm -rf dijkstra_large dijkstra_small output* *.o *.bc .*.o .*.bc

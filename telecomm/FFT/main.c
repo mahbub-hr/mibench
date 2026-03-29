@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
+
+void fft_float(unsigned int, int, float*, float*, float*, float*);
 
 int main(int argc, char *argv[]) {
 	unsigned MAXSIZE;
