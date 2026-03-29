@@ -12,4 +12,4 @@ qsort_large: qsort_large.c Makefile
 	$(CC) $(CFLAGS) qsort_large.c -o qsort_large -lm
 
 clean:
-	rm -rf qsort_small qsort_large output*
+	rm -rf qsort_small qsort_large output* *.o *.bc .*.o .*.bc

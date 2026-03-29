@@ -6,12 +6,12 @@
 
 # 3. Explicitly allow source and build files
 !Makefile
-!*.c
-!*.h
-!*.cpp
-!*.txt
-!*.sh
-!src/
+# !*.c
+# !*.h
+# !*.cpp
+# !*.txt
+# !*.sh
+# !src/
 
 # 4. Specifically ignore the outputs your script creates
 # (Even if they matched the rules above)
