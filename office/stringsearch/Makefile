@@ -4,13 +4,13 @@ CC = gcc
 CFLAGS = -static -O3 -Wno-error=implicit-int -Wno-error=implicit-function-declaration
 LIBS = -lm
 
-all: search_small search_large
+all: stringsearch_small stringsearch_large
 
-search_small: ${FILE1} Makefile
-	$(CC) $(CFLAGS) ${FILE1} -O3 -o search_small
+stringsearch_small: ${FILE1} Makefile
+	$(CC) $(CFLAGS) ${FILE1} -O3 -o stringsearch_small
 
-search_large: ${FILE2} Makefile
-	$(CC) $(CFLAGS) ${FILE2} -O3 -o search_large
+stringsearch_large: ${FILE2} Makefile
+	$(CC) $(CFLAGS) ${FILE2} -O3 -o stringsearch_large
 
 clean:
-	rm -rf search_small search_large output*
+	rm -rf stringsearch_small stringsearch_large output* *.o .*.o *.bc .*.bc

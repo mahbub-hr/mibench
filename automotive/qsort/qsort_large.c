@@ -23,10 +23,14 @@ int compare(const void *elem1, const void *elem2)
   return (distance1 > distance2) ? 1 : ((distance1 == distance2) ? 0 : -1);
 }
 
+struct my3DVertexStruct array[MAXARRAY];
+FILE *fp;
+int i,count=0;
+int x, y, z;
 
 int
 main(int argc, char *argv[]) {
-  struct my3DVertexStruct array[MAXARRAY];
+  
   FILE *fp;
   int i,count=0;
   int x, y, z;
