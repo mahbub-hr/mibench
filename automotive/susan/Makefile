@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -static -O3 -w #-Wno-error=implicit-int -Wno-error=implicit-function-declaration -Wno-implicit-int -Wno-deprecated-non-prototype -Wno-return-type
+CFLAGS = -static -O3 -w -Wno-error=implicit-int
 LIBS = -lm
 
 susan: susan.c Makefile
