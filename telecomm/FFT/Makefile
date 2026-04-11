@@ -1,7 +1,7 @@
 OBJ = main.o fftmisc.o  fourierf.o
 FILE = main.c fftmisc.c  fourierf.c
 CC = gcc
-CFLAGS = -static -O3 -g
+CFLAGS = -static -O0 -g
 
 fft: ${OBJ} Makefile
 	$(CC)  ${CFLAGS} ${OBJ} -o fft -lm

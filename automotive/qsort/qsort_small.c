@@ -19,12 +19,11 @@ int compare(const void *elem1, const void *elem2)
 }
 
 struct myStringStruct array[MAXARRAY];
-FILE *fp;
 int i,count=0;
 
 int
 main(int argc, char *argv[]) {
-  
+  FILE *fp;
   if (argc<2) {
     fprintf(stderr,"Usage: qsort_small <file>\n");
     exit(-1);

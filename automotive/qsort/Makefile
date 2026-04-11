@@ -1,7 +1,7 @@
 FILE1 = qsort_small.c
 FILE2 = qsort_large.c
 CC = gcc
-CFLAGS = -static -O3
+CFLAGS = -static -O0
 LIBS = -lm
 
 all: qsort_small qsort_large
