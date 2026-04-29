@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -static -O3
+CFLAGS = -static -O0
 LIBS = -lm
 
 all:  dijkstra_large dijkstra_small

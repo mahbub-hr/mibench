@@ -1,4 +1,4 @@
-FILE1 = basicmath_small.c   rad2deg.c  cubic.c   isqrt.c
+FILE1 = basicmath_small_alt.c   rad2deg.c  cubic.c   isqrt.c
 FILE2 = basicmath_large.c   rad2deg.c  cubic.c   isqrt.c
 CC = gcc
 CFLAGS = -static -O3
