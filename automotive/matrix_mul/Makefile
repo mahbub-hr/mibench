@@ -1,13 +1,13 @@
 
-.PHONY: all clean matrix_mul matrix_mul_dup matrix_mul_partitioned
+.PHONY: all clean matrix_mul.bin
 CC = gcc
-CFLAGS = -static -O0
+CFLAGS = -static -O3 -g
 
-all: matrix_mul matrix_mul_dup matrix_mul_partitioned
+all: matrix_mul.bin
 
-matrix_mul: 
-	$(CC) $(CFLAGS) matrix_mul.c -o matrix_mul
+matrix_mul.bin: 
+	$(CC) $(CFLAGS) matrix_mul.c -o matrix_mul.bin
 
 clean:
-	rm -rf matrix_mul matrix_mul_dup matrix_mul_partitioned output* *.o *.bc .*.o .*.bc
+	rm -rf matrix_mul.bin output* *.o *.bc .*.o .*.bc *.tmp *.bin *.log *csv .gdb_history
 	

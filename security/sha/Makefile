@@ -6,9 +6,9 @@
 CC = gcc
 CFLAGS = -static -O3 -Wall
 
-sha:	sha_driver.o sha.o
+sha.bin:	sha_driver.o sha.o
 	$(CC) -o $@ sha_driver.o sha.o
 	strip $@
 
 clean:
-	rm -rf *.o sha output*
+	rm -rf *.o sha output* *.o *.*.patch *.bc .*.o .*.bc *.bin *.log *.txt *.csv

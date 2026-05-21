@@ -5,6 +5,14 @@
 #define UNLIMIT
 #define MAXARRAY 60000 /* this number, if too large, will cause a seg. fault!! */
 
+extern void DataCorruption_Handler() {
+    fprintf(stderr, "EDCP: Error Detected In Software\n");
+}
+
+extern void SigMismatch_Handler() {
+    fprintf(stderr, "EDCP: Error Detected In Software\n");
+}
+
 struct my3DVertexStruct {
   int x, y, z;
   double distance;

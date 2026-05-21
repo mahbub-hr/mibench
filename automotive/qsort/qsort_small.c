@@ -18,7 +18,7 @@ int compare(const void *elem1, const void *elem2)
   return (result < 0) ? 1 : ((result == 0) ? 0 : -1);
 }
 
-struct myStringStruct array[MAXARRAY];
+static struct myStringStruct array[MAXARRAY];
 int i,count=0;
 
 int
