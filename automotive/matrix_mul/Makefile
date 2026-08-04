@@ -1,7 +1,7 @@
 
 .PHONY: all clean matrix_mul.bin
 CC = gcc
-CFLAGS = -static -O3 -g
+CFLAGS = -static -O3 -g -fno-vectorize -fno-slp-vectorize
 
 all: matrix_mul.bin
 

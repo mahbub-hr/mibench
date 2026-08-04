@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -static -O0 -g
+CFLAGS = -static -O3 -g -fno-vectorize -fno-slp-vectorize
 LIBS = -lm
 
 crc.bin: crc_32.c Makefile
