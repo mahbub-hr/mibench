@@ -3,8 +3,8 @@ CC = gcc
 CFLAGS = -static -O3
 LIBS = -lm
 
-bitcnts: ${FILE} Makefile
-	$(CC) $(CFLAGS) ${FILE} -o bitcnts
+bitcnts.bin: ${FILE} Makefile
+	$(CC) $(CFLAGS) ${FILE} -o bitcnts.bin
 
 clean:
-	rm -rf bitcnts output* *.o *.bc .*.o .*.bc
+	rm -rf bitcnts bitcnts.bin output* *.o *.bc .*.o .*.bc

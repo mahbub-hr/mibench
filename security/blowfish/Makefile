@@ -21,7 +21,7 @@ MAKE=make -f Makefile
 #CFLAG= -O
 
 CC=gcc
-CFLAG= -static -O3 -fomit-frame-pointer
+CFLAG= -static -O3 -fomit-frame-pointer -Wno-error=implicit-int -Wno-error=implicit-function-declaration
 
 CFLAGS=$(OPTS) $(CFLAG)
 CPP=$(CC) -E
