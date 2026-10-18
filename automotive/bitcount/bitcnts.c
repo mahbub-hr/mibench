@@ -20,9 +20,12 @@ static int CDECL bit_shifter(long int x);
 
 int main(int argc, char *argv[])
 {
+#ifndef FI_DETERMINISTIC_OUTPUT
   clock_t start, stop;
   double ct, cmin = DBL_MAX, cmax = 0;
-  int i, cminix, cmaxix;
+  int cminix, cmaxix;
+#endif
+  int i;
   long j, n, seed;
   int iterations;
   static int (* CDECL pBitCntFunc[FUNCS])(long) = {
@@ -54,11 +57,14 @@ int main(int argc, char *argv[])
   puts("Bit counter algorithm benchmark\n");
   
   for (i = 0; i < FUNCS; i++) {
+#ifndef FI_DETERMINISTIC_OUTPUT
     start = clock();
-    
+#endif
+
     for (j = n = 0, seed = rand(); j < iterations; j++, seed += 13)
 	 n += pBitCntFunc[i](seed);
-    
+
+#ifndef FI_DETERMINISTIC_OUTPUT
     stop = clock();
     ct = (stop - start) / (double)CLOCKS_PER_SEC;
     if (ct < cmin) {
@@ -69,11 +75,16 @@ int main(int argc, char *argv[])
 	 cmax = ct;
 	 cmaxix = i;
     }
-    
+
     printf("%-38s> Time: %7.3f sec.; Bits: %ld\n", text[i], ct, n);
+#else
+    printf("%-38s> Bits: %ld\n", text[i], n);
+#endif
   }
+#ifndef FI_DETERMINISTIC_OUTPUT
   printf("\nBest  > %s\n", text[cminix]);
   printf("Worst > %s\n", text[cmaxix]);
+#endif
   return 0;
 }
 
