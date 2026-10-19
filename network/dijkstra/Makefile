@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -static -O3 -fno-vectorize -fno-slp-vectorize -fno-unroll-loops
+CFLAGS = -static -O3 -g -fno-vectorize -fno-slp-vectorize -fno-unroll-loops
 LIBS = -lm
 
 all:  dijkstra_large.bin dijkstra_small.bin
